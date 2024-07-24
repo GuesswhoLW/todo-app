@@ -2,8 +2,6 @@
 
 <template>
   <div class="home">
-    <h1>Home</h1>
-    <p>Welcome to your To-Do List app!</p>
     <TodoList />
   </div>
 </template>

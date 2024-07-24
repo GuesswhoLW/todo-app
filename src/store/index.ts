@@ -20,9 +20,8 @@ export default createStore({
       });
     },
     REMOVE_TODO(state, id: number) {
-      console.log("Before REMOVE_TODO, todos:", state.todos);
+      console.log("REMOVE_TODO called with id:", id);
       state.todos = state.todos.filter((todo) => todo.id !== id);
-      console.log("After REMOVE_TODO, todos:", state.todos);
     },
   },
   actions: {
@@ -30,6 +29,7 @@ export default createStore({
       commit("ADD_TODO", text);
     },
     removeTodo({ commit }, id: number) {
+      console.log("removeTodo action dispatched with id:", id);
       commit("REMOVE_TODO", id);
     },
   },

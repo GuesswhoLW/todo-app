@@ -1,32 +1,120 @@
 /* styles.css */
 
+/* Light Mode Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .home {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .todo-list input {
-    padding: 10px;
-    margin-right: 10px;
-  }
-  
-  .todo-list button {
-    padding: 10px;
-  }
-  
-  .todo-list ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .todo-list li {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0;
-  }
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.night-mode {
+  background-color: black;
+  color: limegreen;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1a1a1a;
+}
+
+.night-mode header {
+  background-color: #1a1a1a;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+  justify-content: center;
+  flex: 1;
+}
+
+nav a {
+  color: green;
+  text-decoration: none;
+  transition: text-shadow 0.3s;
+}
+
+nav a:hover {
+  text-shadow: 0 0 10px limegreen;
+}
+
+.toggle-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: green;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: inherit;
+}
+
+.home, .about {
+  text-align: center;
+  padding: 20px;
+}
+
+.todo-list {
+  text-align: left;
+}
+
+.todo-list table {
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+.todo-list input {
+  padding: 10px;
+  width: 300px;
+  background-color: black;
+  color: green;
+  border: 1px solid green;
+  box-shadow: 0 0 5px green;
+}
+
+.todo-list button {
+  padding: 10px;
+  background-color: black;
+  color: green;
+  border: 1px solid green;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.todo-list button:hover {
+  box-shadow: 0 0 10px limegreen;
+}
+
+.todo-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.todo-list li button {
+  margin-left: 10px;
+}

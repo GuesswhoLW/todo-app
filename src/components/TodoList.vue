@@ -3,31 +3,31 @@
 <template>
   <div class="todo-list">
     <h1>To-Do List</h1>
-    <input
-      v-model="newTodo"
-      @keyup.enter="addTodo"
-      placeholder="Add a new task"
-    />
-    <ul>
-      <TodoItem
-        v-for="todo in todos"
-        :key="todo.id"
-        :todo="todo"
-        @remove="removeTodo"
-      />
-    </ul>
+    <table>
+      <tr>
+        <td>
+          <input
+            v-model="newTodo"
+            @keyup.enter="addTodo"
+            placeholder="Add a new task"
+          />
+        </td>
+        <td><button @click="addTodo">Add</button></td>
+      </tr>
+      <tr v-for="todo in todos" :key="todo.id">
+        <td>{{ todo.text }}</td>
+        <td><button @click="removeTodo(todo.id)">Remove</button></td>
+      </tr>
+    </table>
   </div>
 </template>
+
 <script lang="ts">
 import { defineComponent, ref, computed } from "vue";
 import { useStore } from "vuex";
-import TodoItem from "./TodoItem.vue";
 
 export default defineComponent({
   name: "TodoList",
-  components: {
-    TodoItem,
-  },
   setup() {
     const newTodo = ref("");
     const store = useStore();
