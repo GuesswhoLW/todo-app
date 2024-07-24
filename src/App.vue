@@ -22,7 +22,7 @@ import { defineComponent, ref } from "vue";
 export default defineComponent({
   name: "App",
   setup() {
-    const isNightMode = ref(true);
+    const isNightMode = ref(false);
 
     const toggleNightMode = () => {
       isNightMode.value = !isNightMode.value;
