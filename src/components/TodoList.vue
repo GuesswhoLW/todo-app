@@ -19,7 +19,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, computed } from "vue";
 import { useStore } from "vuex";
 import TodoItem from "./TodoItem.vue";
 
@@ -40,12 +40,15 @@ export default defineComponent({
     };
 
     const removeTodo = (id: number) => {
+      console.log("removeTodo called with id:", id);
       store.dispatch("removeTodo", id);
     };
 
+    const todos = computed(() => store.getters.todos);
+
     return {
       newTodo,
-      todos: store.getters.todos,
+      todos,
       addTodo,
       removeTodo,
     };

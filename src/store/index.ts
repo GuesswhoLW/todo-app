@@ -20,7 +20,9 @@ export default createStore({
       });
     },
     REMOVE_TODO(state, id: number) {
+      console.log("Before REMOVE_TODO, todos:", state.todos);
       state.todos = state.todos.filter((todo) => todo.id !== id);
+      console.log("After REMOVE_TODO, todos:", state.todos);
     },
   },
   actions: {
