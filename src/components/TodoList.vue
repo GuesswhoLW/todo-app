@@ -20,12 +20,8 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";
+import { useStore } from "vuex";
 import TodoItem from "./TodoItem.vue";
-
-interface Todo {
-  id: number;
-  text: string;
-}
 
 export default defineComponent({
   name: "TodoList",
@@ -34,26 +30,22 @@ export default defineComponent({
   },
   setup() {
     const newTodo = ref("");
-    const todos = ref<Todo[]>([]);
-    const nextId = ref(1);
+    const store = useStore();
 
     const addTodo = () => {
       if (newTodo.value.trim() !== "") {
-        todos.value.push({
-          id: nextId.value++,
-          text: newTodo.value.trim(),
-        });
+        store.dispatch("addTodo", newTodo.value.trim());
         newTodo.value = "";
       }
     };
 
     const removeTodo = (id: number) => {
-      todos.value = todos.value.filter((todo) => todo.id !== id);
+      store.dispatch("removeTodo", id);
     };
 
     return {
       newTodo,
-      todos,
+      todos: store.getters.todos,
       addTodo,
       removeTodo,
     };
