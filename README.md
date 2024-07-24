@@ -21,12 +21,12 @@ This is a simple To-Do List application built with Vue.js and TypeScript. It inc
 
 These instructions will help you set up the project locally.
 
-### Prerequisites
+## Prerequisites
 
 - Node.js
 - npm or yarn
 
-### Installation
+## Installation
 
 1. Clone the repository:
 
@@ -34,42 +34,43 @@ These instructions will help you set up the project locally.
    git clone https://github.com/GuesswhoLW/todo-app.git
    cd todo-app
 
-2.	Install dependencies:
+2. Install dependencies:
 
     ```bash
     npm install
 
 ## Running the App
 
-# To run the app locally, use the following command:
+To run the app locally, use the following command:
 
-    ```bash
-    npm run serve
+  ```bash
+  npm run serve
+  ```
 
-# Open your browser and go to http://localhost:8080 to see the application.
+Open your browser and go to http://localhost:8080 to see the application.
 
 ## Building for Production
 
-# To build the app for production, use the following command:
+To build the app for production, use the following command:
 
-    ```bash
-    npm run build
-
+  ```bash
+  npm run build
+  ```
 ## Deployment
 
-# This app is deployed on Vercel. To deploy your own version, you can follow these steps:
+This app is deployed on Vercel. To deploy your own version, you can follow these steps:
 
-1.	Install Vercel CLI:
+1. Install Vercel CLI:
 
     ```bash
     npm install -g vercel
 
-2.	Login to Vercel:
+2. Login to Vercel:
 
     ```bash
     vercel login
 
-3.	Deploy the app:
+3. Deploy the app:
 
     ```bash
     vercel
@@ -86,17 +87,17 @@ These instructions will help you set up the project locally.
 
 ## Screenshots
 
-    ![Screenshot 1](image-2.png)
-    ![Screenshot 2](image-3.png)
-    ![Screenshot 3](image-4.png)
+![Screenshot 1](image-2.png)
+![Screenshot 2](image-3.png)
+![Screenshot 3](image-4.png)
 
 ## Contributing
 
-# Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-# This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ## Contact
 
